@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+// import 'package:meals/screens/tabs.dart';
+// import 'package:meals/widgets/main_drawer.dart';
 
 class FlitersScreen extends StatefulWidget {
   const FlitersScreen({super.key});
@@ -14,10 +16,22 @@ class _FiltersScreenState extends State<FlitersScreen> {
 
   @override
   Widget build(BuildContext context) {
-    throw Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: const Text('your Filters'),
       ),
+      // drawer: MainDrawer(
+      //   onSelectScreen: (identifire) {
+      //     Navigator.of(context).pop();
+      //     if (identifire == 'meals') {
+      //       Navigator.of(context).push(
+      //         MaterialPageRoute(
+      //           builder: (ctx) => const TabsScreen(),
+      //         ),
+      //       );
+      //     }
+      //   },
+      // ),
       body: Column(
         children: [
           SwitchListTile(
