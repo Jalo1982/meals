@@ -13,7 +13,7 @@ const kInitialFilters = {
   Filter.glutenFree: false,
   Filter.lactosefree: false,
   Filter.vegan: false,
-  Filter.veretarian: false,
+  Filter.vegetarian: false,
 };
 
 class TabsScreen extends ConsumerStatefulWidget {
@@ -57,7 +57,7 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
       if (activeFilters[Filter.vegan]! && !meal.isVegan) {
         return false;
       }
-      if (activeFilters[Filter.veretarian]! && !meal.isVegetarian) {
+      if (activeFilters[Filter.vegetarian]! && !meal.isVegetarian) {
         return false;
       }
       return true;
