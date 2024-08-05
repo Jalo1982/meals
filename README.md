@@ -1,71 +1,75 @@
 # Meals App
 
-A simple and customizable meals application built with Flutter. This app allows users to explore various meal categories, view detailed recipes, and filter meals based on dietary preferences.
+A Flutter application for browsing different meal recipes, categorized by cuisine and other dietary preferences. This app allows users to filter recipes based on dietary restrictions and mark their favorite meals.
+
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Dependencies](#dependencies)
 
 ## Features
+- Browse meals by categories
+- View detailed information about each meal including ingredients and preparation steps
+- Filter meals based on dietary preferences such as gluten-free, lactose-free, vegetarian, and vegan
+- Mark meals as favorites for quick access
 
-- Browse meal categories
-- View meal details including ingredients, steps, and images
-- Filter meals by dietary restrictions (gluten-free, lactose-free, vegan, vegetarian)
-- Lightweight and responsive design
+## Installation
 
-## Folder Structure
+### Prerequisites
+- Flutter SDK: [Install Flutter](https://flutter.dev/docs/get-started/install)
+- VS Code: [Download VS Code](https://code.visualstudio.com/Download)
+- Dart and Flutter extensions for VS Code: [Flutter in VS Code](https://flutter.dev/docs/get-started/editor?tab=vscode)
 
-The project follows a simple structure:
+### Steps
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/meals-app.git
+    cd meals-app
+    ```
 
-```
-meals_app/
-├── lib/
-│   ├── data/
-│   │   └── dummy_data.dart
-│   ├── models/
-│   │   ├── category.dart
-│   │   └── meal.dart
-│   ├── screens/
-│   │   ├── categories_screen.dart
-│   │   ├── meal_details_screen.dart
-│   │   └── meals_screen.dart
-│   ├── widgets/
-│   │   └── category_grid_item.dart
-│   └── main.dart
-├── assets/
-│   └── images/
-├── pubspec.yaml
-└── README.md
-```
+2. Install dependencies:
+    ```bash
+    flutter pub get
+    ```
+
+3. Run the application:
+    ```bash
+    flutter run
+    ```
 
 ## Usage
+1. Launch the application on your emulator or physical device.
+2. Browse through the categories to find meals of interest.
+3. Click on a meal to view its details, including ingredients and preparation steps.
+4. Use the filter option to customize the meal display according to your dietary preferences.
+5. Mark meals as favorites by clicking on the favorite icon.
 
-### Main.dart
+## Project Structure
 
-The entry point of the application. Initializes the app and sets up the theme.
+```
+lib/
+│
+├── main.dart # Entry point of the application
+├── models/ # Data models
+│ ├── category.dart
+│ └── meal.dart
+├── providers/ # State management providers
+│ ├── favorite_meal_provider.dart
+│ └── filters_provider.dart
+├── screens/ # Application screens
+│ ├── categories_screen.dart
+│ ├── category_meals_screen.dart
+│ ├── filters_screen.dart
+│ ├── meal_detail_screen.dart
+│ └── tabs_screen.dart
+└── widgets/ # Reusable widgets
+├── category_item.dart
+├── meal_item.dart
+└── main_drawer.dart
+```
 
-### Models
-
-- `category.dart`: Defines the structure of a meal category.
-- `meal.dart`: Defines the structure of a meal, including its properties and methods.
-
-### Screens
-
-- `categories_screen.dart`: Displays a grid of meal categories.
-- `meals_screen.dart`: Displays a list of meals for a selected category.
-- `meal_details_screen.dart`: Shows detailed information about a selected meal.
-
-### Widgets
-
-- `category_grid_item.dart`: A widget for displaying individual category items in a grid.
-
-### Data
-
-- `dummy_data.dart`: Contains sample data for categories and meals.
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
-
-
-## Contact
-
-For any inquiries or questions, feel free to reach out:
-
-ali.aljalo@gmail.com
+## Dependencies
+- [flutter](https://pub.dev/packages/flutter)
+- [flutter_riverpod](https://pub.dev/packages/flutter_riverpod)
